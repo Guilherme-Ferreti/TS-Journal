@@ -1,17 +1,17 @@
-<script setup lang="ts"></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit
-    <a
-      href="https://vuejs.org/"
-      target="_blank"
-      rel="noopener"
-      >vuejs.org</a
-    >
-    to read the documentation
-  </p>
+  <main class="m-auto max-w-200 p-10">
+    <TheHeader />
+    <EntryEditor />
+    <ul>
+      <li>
+        <EntryCard />
+      </li>
+    </ul>
+  </main>
 </template>
 
-<style scoped></style>
+<script setup lang="ts">
+import EntryCard from '@/components/EntryCard.vue';
+import EntryEditor from '@/components/EntryEditor.vue';
+import TheHeader from '@/components/TheHeader.vue';
+</script>

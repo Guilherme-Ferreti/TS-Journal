@@ -1,0 +1,20 @@
+html {
+  @apply bg-white text-gray-800 dark:bg-slate-900 dark:text-white;
+}
+
+button {
+  @apply flex cursor-pointer rounded bg-teal-700 px-5 py-2 text-white;
+}
+
+button svg path {
+  @apply fill-white;
+}
+
+button svg {
+  @apply ml-3 fill-white;
+}
+
+svg,
+svg path {
+  @apply rounded-2xl fill-slate-700 dark:fill-white;
+}
