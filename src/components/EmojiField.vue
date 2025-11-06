@@ -5,18 +5,18 @@
       v-for="emoji in emojis"
       :is="emoji.component"
       :key="emoji.name"
-      :class="{ 'emoji--selected': modelValue === emoji.name }"
-      @click="$emit('update:modelValue', emoji.name === modelValue ? null : emoji.name)"
+      :class="{ 'emoji--selected': model === emoji.name }"
+      @click="model = emoji.name === model ? null : emoji.name"
     ></component>
   </div>
 </template>
 
 <script lang="ts" setup>
 import UseEmojis from '@/composables/UseEmojis';
+import type { Emoji } from '@/types/Emoji';
 const { emojis } = UseEmojis();
 
-defineProps(['modelValue']);
-defineEmits(['update:modelValue']);
+const model = defineModel<Emoji | null>();
 </script>
 
 <style scoped>
