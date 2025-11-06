@@ -1,4 +1,5 @@
 <template>
+  <ColorSchemeToggle />
   <main class="m-auto max-w-200 p-10">
     <TheHeader />
     <EntryEditor @created="handleEntryCreated($event)" />
@@ -19,6 +20,7 @@ import EntryEditor from '@/components/EntryEditor.vue';
 import TheHeader from '@/components/TheHeader.vue';
 import { nanoid } from 'nanoid';
 import { ref } from 'vue';
+import ColorSchemeToggle from './components/ColorSchemeToggle.vue';
 import type Entry from './types/Entry';
 
 const entries = ref<Entry[]>([
