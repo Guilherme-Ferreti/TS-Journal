@@ -17,9 +17,9 @@
 import EntryCard from '@/components/EntryCard.vue';
 import EntryEditor from '@/components/EntryEditor.vue';
 import TheHeader from '@/components/TheHeader.vue';
+import { nanoid } from 'nanoid';
 import { ref } from 'vue';
 import type Entry from './types/Entry';
-import { nanoid } from 'nanoid';
 
 const entries = ref<Entry[]>([
   {

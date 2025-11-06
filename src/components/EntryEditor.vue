@@ -25,12 +25,12 @@
 </template>
 
 <script lang="ts" setup>
-import EmojiField from '@/components/EmojiField.vue';
 import ArrowCircleRight from '@/assets/icons/arrow-circle-right.svg';
-import { ref } from 'vue';
+import EmojiField from '@/components/EmojiField.vue';
 import type { Emoji } from '@/types/Emoji';
 import type Entry from '@/types/Entry';
 import { nanoid } from 'nanoid';
+import { ref } from 'vue';
 import FieldError from './FieldError.vue';
 
 const body = ref('');
